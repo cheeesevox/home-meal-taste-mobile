@@ -1,10 +1,10 @@
 import { SafeAreaView, StatusBar, Text, View } from "react-native";
 import { StyleSheet } from "react-native";
+import CustomerNavigator from "./src/navigation/CustomerNavigator";
+import CustomerList from "./src/screens/CustomerScreens/CustomerList";
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>App.js page</Text>
-    </SafeAreaView>
+    CustomerList()
   );
 }
 
