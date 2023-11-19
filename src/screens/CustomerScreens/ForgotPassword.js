@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, } from "rea
 import React, { useState } from "react";
 import { Ionicons } from '@expo/vector-icons'
 
-const RegisterScreen= ({navigation})=> {
+const ForgotPassword= ({navigation})=> {
     const[phone, setPhone] = useState("");
 	const[password, setPassword] = useState("");
 	const[username, setUserName] = useState("");
@@ -11,12 +11,6 @@ const RegisterScreen= ({navigation})=> {
 
     const onChagePhone = (value) =>{
 		setPhone(value)
-	}
-	const onChagePassword = (value) =>{
-		setPassword(value)
-	}
-    const onChageUserName = (value) =>{
-		setUserName(value)
 	}
     const onChageEmail = (value) =>{
 		setEmail(value)
@@ -75,27 +69,9 @@ const RegisterScreen= ({navigation})=> {
 								<TextInput width={280} placeholder="Your Phone Numbers" value={phone} onChangeText={onChagePhone}></TextInput>
 					</View>
 					</View>
-                    {/* password for register */}
-					<View style={{paddingLeft:10,marginHorizontal:40, flexDirection:'row', borderColor:'grey', borderWidth:1, borderRadius:10,}}>
-						<View style={{justifyContent:"center", alignItems:"center",}}>
-							<Ionicons name="lock-closed-outline" size={20}>
-							</Ionicons>
-						</View>
-							<View style={{padding:20}}>
-								<TextInput width={280} placeholder="Your Password" value={password} secureTextEntry={true} onChangeText={onChagePassword}></TextInput>
-							</View>
-					</View >
-                    {/* user name */}
-                    <View style={{marginTop:10 ,paddingLeft:10,marginHorizontal:40, flexDirection:'row', borderColor:'grey', borderWidth:1, borderRadius:10, marginBottom:10}}>
-						<View style={{justifyContent:"center", alignItems:"center",}}>
-							<Ionicons name="card-outline" size={20}>
-							</Ionicons>
-						</View>
-							<View style={{ padding:20}}>
-								<TextInput width={280} placeholder="Your Name" value={username} onChangeText={onChageUserName}></TextInput>
-					</View>
-					</View>
-                    {/* user     */}
+                    
+                   
+                    {/* user email    */}
 					<View style={{paddingLeft:10,marginHorizontal:40, flexDirection:'row', borderColor:'grey', borderWidth:1, borderRadius:10,}}>
 						<View style={{justifyContent:"center", alignItems:"center",}}>
 							<Ionicons name="mail-outline" size={20}>
@@ -133,18 +109,18 @@ const RegisterScreen= ({navigation})=> {
                 
 
 				<Text style={{ fontSize: 18, color: "#fff", fontWeight: "700",}}>
-					Regiter
+					Reset Your Account
 				</Text>
 			</TouchableOpacity>
 </View>
 			<View style={{justifyContent:"center",alignItems:"center"}}>
 				<Text style={{marginTop:50}}>
-					Already Have Account ? 
+					Already Remember Account ? 
 				</Text>
 				<View>
 						<TouchableOpacity 
 						onPress={() => navigation.navigate("Login")}
-						style={{ marginTop:20 ,color:'white',justifyContent:"center",alignItems:"center"}}>
+						style={{ borderWidth:10,borderColor:'white',borderRadius:10,marginTop:20 ,color:'white',justifyContent:"center",alignItems:"center"}}>
 							<Text style={{color:'black',fontWeight:'500',}}>Login</Text>
 						</TouchableOpacity>
 					</View>
@@ -155,4 +131,4 @@ const RegisterScreen= ({navigation})=> {
 }
 
 const styles = StyleSheet.create({})
-export default RegisterScreen
+export default ForgotPassword
